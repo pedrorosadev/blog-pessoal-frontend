@@ -1,21 +1,23 @@
 import React from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/estaticos/navbar/Navbar";
+import Footer from "./components/estaticos/footer/Footer";
+import Home from "./pages/home/Home";
 import "./App.css";
-import { Home } from "./pages/home/Home";
-import { About } from "./pages/about/About";
-import { Navbar } from "./components/statics/navbar/Navbar";
+import Login from "./pages/login/Login";
+import CadastroUsuario from "./pages/cadastroUsuario/CadastroUsuario";
 
 function App() {
-  const nome = "Pedro";
   return (
     <Router>
       <Navbar />
-
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/cadastrousuario" element={<CadastroUsuario />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
