@@ -16,7 +16,6 @@ function Home() {
       navigate("/login");
     }
   }, [token]);
-
   return (
     <>
       <Grid
